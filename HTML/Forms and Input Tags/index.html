@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms</title>
+</head>
+<body>
+    
+    <h1>Form to apply for Sigma Web Development</h1>
+
+<form action="https://httpbin.org/get" method="get">
+
+<!--
+Text Input:
+The text input type is the most basic form of input and is widely used for collecting simple text data. -->
+<div>
+<label for="username">Enter your Name</label>
+<input type="text" name="username" id="username" placeholder="username">
+</div>
+
+<br>
+
+<!------------------------------------------------------------------------>
+<!--password input :
+ The password input type is similar to the text type but hides the characters entered by the user for security reasons.
+ 
+ -->
+<div>
+<label for="password">Enter your password</label>
+<input type="password" name="password" id="password" placeholder="Enter your password" >
+</div>
+
+<br>
+<!------------------------------------------------------------------------>
+
+<!--Radio Buttons:are used when you want the user to select only one option from a set of choices-->
+<input type="radio" id="male" name="gender" value="male">
+<label for="male">Male</label>
+
+<input type="radio" id="female" name="gender" value="female">
+<label for="female">Female</label>
+
+<br>
+<br>
+<!------------------------------------------------------------------------>
+
+<!--Checkboxes: are used when you want the user to select one or more options from a set of choices.-->
+<div>
+<input type="checkbox" id="subscribe" name="subscribe" value="yes">
+<label for="subscribe">Subscribe to newsletter</label>
+
+<br>
+
+<input type="checkbox" id="terms" name="terms" value="agree">
+<label for="terms">Agree to terms and conditions</label>
+
+</div>
+
+<!--there are still many types please checkout code with harry website-->
+      
+<br>
+<!------------------------------------------------------------------------>
+
+<!--The Textarea Element
+
+The textarea element is used when you need multiline text input from the user. This is particularly useful for comments, reviews, or any other type of input where the length is unpredictable.
+
+The rows and cols attributes define the visible dimensions of the textarea.
+-->
+
+<div>
+
+<label for="comment">Comment's Section</label>
+<br>
+<textarea id="comment" name="comment" rows="20" cols="50">Enter your comment here 
+</textarea>
+
+</div>
+
+<br>
+<!------------------------------------------------------------------------>
+
+<!--The Select Element:
+The select element creates a dropdown menu for the user.
+
+It is useful when you have a predefined list of options for the user to choose from.
+
+Each option inside the select tag represents an item in the dropdown list.
+-->
+
+<select  name="fruits">
+      <option value="apple">Apple</option>
+      <option value="banana">Banana</option>
+      <option value="cherry">Cherry</option>
+</select>
+
+<!---------------------------------------------------------------------->
+<br>
+<br>
+<!---------------------------------------------------------------------->
+
+<input type="submit" value="SUBMIT">
+
+</form>
+
+
+
+
+
+
+
+
+</body>
+</html>

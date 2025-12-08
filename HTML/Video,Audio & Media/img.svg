@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="100" width="100">
+    <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+</svg>
+
+<!--
+
+# ✅ **What is `xmlns`?**
+
+`xmlns` means **XML Namespace**.
+
+A *namespace* tells the browser **what type of XML language** the file is written in.
+
+Just like:
+
+* `.html` → browser knows it's HTML
+* `.css` → browser knows it's CSS
+
+For **SVG**, we need to tell the browser:
+
+👉 "This file uses SVG rules, not HTML rules."
+
+---
+
+# ✅ **Why do we need `xmlns="http://www.w3.org/2000/svg"`?**
+
+Because **SVG is XML**, not HTML.
+Without this namespace, the browser does not know it should interpret the tags (`<svg>`, `<circle>`, `<rect>`, etc.) as **SVG shapes**.
+
+If you remove it:
+
+❌ Browser thinks it’s unknown XML
+❌ Shapes may not render
+❌ `<img src="file.svg">` often fails
+❌ Some browsers completely ignore the SVG
+
+---
+
+# 🧠 Think of it like this:
+
+Namespaces prevent confusion.
+
+For example:
+
+```
+<circle> … </circle>
+```
+
+This tag exists **only in SVG**, not HTML.
+So the browser must be told:
+
+👉 “Hey, these tags belong to the SVG language.”
+
+That’s what the namespace does.
+
+---
+
+# 🔍 **Why that exact URL? (`http://www.w3.org/2000/svg`)**
+
+It's NOT a website link.
+
+It's just a **unique identifier** created by W3C that represents:
+
+**“The official SVG language specification.”**
+
+You don't visit it.
+You just declare it.
+
+---
+
+# ✅ **Without the namespace, your SVG in `<img src="*.svg">` will BREAK**
+
+This is exactly why your earlier image didn't load.
+
+**Browsers require the namespace** for SVGs loaded as separate files:
+
+```xml
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
+```
+
+If it’s missing → SVG inside `<img>` fails.
+
+---
+
+# ⭐ In summary:
+
+### **What is it?**
+
+The official identifier for the SVG language.
+
+### **Why add it?**
+
+Because browsers need it to understand and render SVG correctly — especially when loaded from files.
+
+
+<!---------------------------------------------------------------------->
+
+The string xmlns="http://www.w3.org/2000/svg" is called a **Namespace Declaration** (full name).
+
+More specifically, the part http://www.w3.org/2000/svg is called the **SVG Namespace URL**.
+
+---
+
+# ✔ **Correct technical terms**
+
+### **1. XML Namespace Declaration**
+
+(what you write inside `<svg>`)
+
+### **2. SVG Namespace URI**
+
+(the value assigned to `xmlns` → the URL string)
+
+### **3. Default Namespace**
+
+Because it uses just `xmlns` (not `xmlns:prefix`), it becomes the default namespace for everything inside `<svg>`.
+
+---
+
+# Short Answer
+
+👉 **It is called the SVG Namespace URI.**
+
+If you want, I can also explain:
+
+* Why it's a URI even though it looks like a URL
+* What happens inside the browser when this namespace is parsed
+-->

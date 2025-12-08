@@ -1,0 +1,109 @@
+READ THIS OR CODEWITHHARRY HTML - MORE ON FORMS
+## 🌐 **Common Form Attributes**
+
+
+### 🏁 **action**
+
+📍 Tells **where** the form data should go after clicking “Submit.”
+It’s usually a link to a server file (like `.php`, `.js`, or an API).
+
+<form action="/submit.php" method="POST">
+</form>
+
+🗣️ “After submitting, send my data to `/submit.php`.”
+
+
+
+### 🚚 **method**
+
+💬 Tells **how** the data should be sent:
+
+* 🌐 **GET** → Data goes in the URL (for searches, filters)
+* 🔒 **POST** → Data is hidden in the body (for login, registration)
+
+<form action="/submit.php" method="POST">
+</form>
+
+
+
+### 🏷️ **name**
+
+🧩 Gives each input field a **unique label** so that the server knows which data belongs where.
+
+```html
+<input type="text" name="username">
+```
+
+🗣️ “This text box is called `username`.”
+
+<!------------------------------------------------------------------------>
+
+                    ## ✨ **New HTML5 Attributes**
+
+
+### 💭 **placeholder**
+
+🪄 Shows **hint text** inside the box — disappears when you start typing.
+
+<input type="text" placeholder="Enter your username">
+
+Eg:- password hint
+    <input type="text" placeholder="@apppaamma@">
+    
+👀 It helps users know what to type.
+
+
+
+### ✅ **required**
+
+🚫 Makes a field **mandatory** — form won’t submit until filled.
+
+
+<input type="text" required>
+
+
+⚠️ “You must fill this before submitting!”
+
+
+
+### 🎯 **autofocus**
+
+🎯 Automatically puts the **cursor** inside that field when the page loads.
+
+
+<input type="text" autofocus>
+
+
+📌 Saves time — user can start typing right away.
+
+<!------------------------------------------------------------------------>
+
+## 🔍 **HTML5 Validation Attributes**
+
+
+### 🚫 **required**
+
+(Already explained above)
+
+* Makes sure user **cannot skip** that field.
+
+<input type="text" required>
+
+
+
+### 🔢 **pattern**
+
+🧠 Lets you set a **rule (regular expression)** for what’s allowed in the input.
+
+
+<input type="text" pattern="[a-zA-Z0-9]+">
+
+📖 **Meaning (in plain words):**
+✅ Only **letters (A–Z, a–z)** and **numbers (0–9)** are allowed.
+❌ No spaces, no special characters like @, #, $, etc.
+
+💬 So:
+
+* ✅ “Yashas123” → OK
+* ❌ “Yashas@123” → Not OK
+

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>images</title>
+</head>
+<body>
+
+<!------------------------------------------------------------------->
+                            <!--IMAGES-->
+
+<img height="230" src="train.jpg" alt="Train Image">
+
+   <!--
+    if we adjust height then width will be automatically adjusted ,vice versa
+    alt provides fallback (alternate) text to display when the image specified by the <img> element is not loaded.  
+    -->
+<!---------------------------------------------------------------------->
+<!--                           
+                             HTML TABLES 
+
+link :https://www.codewithharry.com/tutorial/html-tables
+
+-->
+
+<table>
+
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>designation</th>
+    <th>fav language</th>
+    </tr>
+
+  <tr>
+    <td>Harry</td>
+    <td>10</td>
+    <td>Developer</td>
+    <td>Python</td>
+    </tr>
+
+    <tr>
+        <td>Rohan</td>
+        <td>18</td>
+        <td>Manager</td>
+        <td>C++</td>
+        </tr>
+
+        <tr>
+            <td>roshan</td>
+            <td>20</td>
+            <td>Instructor</td>
+            <td>JavaScript</td>
+            </tr>
+</table>
+
+<!-- we can use <th> for heading of table and <td> for data of table
+   
+    Key Elements of HTML Table
+<table>: Defines the table itself.
+<tr>: Used for table rows.
+<th>: Used for table headings.
+<td>: Used for table cells (data).
+
+------------------------------------------------------------------------>
+<br>
+                       <!-- Border Attribute-->
+
+<table border="1">
+    <tr>
+        
+        <th>name</th>
+        <th>age</th>
+        <th>designation</th>
+        <th>fav language</th>
+    </tr>
+
+    <tr>
+        <td>Harry</td>
+        <td>10</td>
+        <td>Developer</td>
+        <td>Python</td>
+    </tr>
+
+    <tr>
+        <td>Rohan</td>
+        <td>18</td>
+        <td>Manager</td>
+        <td>C++</td>        
+    </tr>
+
+    <tr>
+        <td>roshan</td>
+        <td>20</td>
+        <td>Instructor</td>
+        <td>JavaScript</td>
+</table>
+
+
+
+<!---------------------------------------------------------------------->
+<br>
+                  <!--rowspan and colspan Attributes
+
+Rowspan: If you want a table cell to span multiple rows, you can use the rowspan attribute.
+
+<td rowspan="value">                      -->
+
+    <table border="1">
+  <tr>
+    <td>Row 1, Column 1</td>
+    <td rowspan="3">Merged Rows</td>
+  </tr>
+
+  <tr>
+    <td>Row 2, Column 2</td>
+  </tr>
+
+    <tr>
+        <td>Row 3, Column 3</td>
+    </tr>
+   
+</table>
+
+<br
+
+
+-->
+<!---------------------------------------------------------------------->
+<!---
+
+    Colspan: If you want a table cell to span multiple columns, you can use the colspan attribute.
+    <td colspan="value">     
+-->                   
+
+<table border="1">
+ 
+  <tr>
+    <td colspan="5">Differences</td>
+    <td>continued</td>
+  </tr>
+
+  <tr>
+    <td>Column 1</td>
+    <td>Column 2</td>
+    <td>Column 3</td>
+    <td>Column 4</td>
+    <td>Column 5</td>
+    <td>Column 6</td>
+ </tr>
+ 
+</table>
+
+<br>
+
+<!---------------------------------------------------------------------->
+<!--                    Adding a Caption
+#To add a title to your table, you can use the <caption> element.
+#This element helps both in terms of SEO and accessibility.
+#<caption>Student Details</caption>
+
+ 
+                   Table Headers and Footers
+| Tag       | Meaning      | Common Use               |
+| --------- | ------------ | ------------------------ |
+| `<thead>` | Table Header | Column names or headings |
+| `<tfoot>` | Table Footer | Totals or summary data   |
+| `<tbody>` | Table Body   | Main data content        | -->
+
+
+  <table border="10">
+  <!-- Caption -->
+  <caption>Employee Information</caption>
+
+  <!-- Table Header -->
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Position</th>
+      <th>Salary</th>
+    </tr>
+  </thead>
+
+  <!-- Table Body -->
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Alice</td>
+      <td>Developer</td>
+      <td>$80,000</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Bob</td>
+      <td>Designer</td>
+      <td>$70,000</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Carol</td>
+      <td>Manager</td>
+      <td>$90,000</td>
+    </tr>
+  </tbody>
+
+  <!-- Table Footer -->
+  <tfoot>
+    <tr>
+      <td colspan="3">Total Employees</td>
+      <td>3</td>
+    </tr>
+  </tfoot>
+</table>
+
+<!---------------------------------------------------------------------->
+
+</body>
+</html>

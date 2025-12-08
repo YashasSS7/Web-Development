@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entities</title>
+</head>
+<body>
+   
+  <!--To differentiate normal words with html tags
+  eg:- <p></p> using this in html ,directly takes it has html paragraph tag ,so to differentaite it with normal words we use entities
+
+  so ,using  &lt; p &gt; instead of <p>
+  
+  -->  
+
+this is a paragraph tag (HTML TAG )<p> </p>
+so this is the use of entities &lt; p &gt; 
+
+<hr>
+
+&lt;p&gt; &lt;/p&gt;
+
+<p>2 &lt; 5 and 5 &gt; 2</p>
+
+<hr>
+
+Copyright &copy; yashas
+
+<p>Price: &#8377; 499</p>
+
+
+<h1> &copy; </h1> <!--copyright-->
+
+<h1> &#8377; </h1> <!--Rupee-->
+
+
+
+<hr>
+<!------------------------------------------------------------------------>
+                            
+                          <h1>PRE TAG</h1>
+<!--
+
+                            <pre>` tag?
+
+`<pre>` means **Preformatted Text**.
+
+It tells the browser:
+
+👉 “Show the text exactly as I typed it —
+with the same spaces, line breaks, and formatting.”
+
+---
+
+# 🔥 **Why do we use `<pre>`?**
+
+Normally, HTML **ignores extra spaces** and **line breaks**.
+
+Example:
+
+```
+Hello     World
+Line 1
+Line 2
+```
+
+Browser shows this as:
+`Hello World Line 1 Line 2`
+
+❗ But when you use `<pre>`, browser **keeps all the spacing**.
+
+---
+
+# ✔️ **Example:**
+
+```html
+<pre>
+Hello     World
+Line 1
+    Line 2 (this has extra spaces)
+</pre>
+```
+
+Browser will show **exactly** the same formatting.
+
+---
+
+# ⭐ **Key Points:**
+
+* `<pre>` preserves **spaces**
+* `<pre>` preserves **tabs**
+* `<pre>` preserves **line breaks**
+* Text appears in a **monospace font** (like a typewriter)
+* Useful for showing **code**, **poems**, **ASCII art**, etc.
+
+✔️ When to use <pre>?
+✓ Writing code blocks
+✓ Showing poetry in same structure
+✓ Displaying data with fixed spacing
+✓ ASCII designs
+✓ Debug output
+
+-->
+
+<pre>
+ Hi i am pretag
+
+
+
+after few lines(preserves line)         after few spaces (preserves tabs)
+
+</pre>
+
+
+<hr>
+<!------------------------------------------------------------------------>
+                               <H1> & nbsp; tag </h>
+
+<!---
+
+# ✅ **`&nbsp;` = Non-Breaking Space**
+
+It is an **HTML entity** that creates a **space that the browser will NOT remove or collapse**.
+
+* `&` → start of entity
+* `nbsp` → non-breaking space
+* `;` → end of entity
+
+---
+
+# 🔥 **Uses**
+
+✔ Add extra spaces
+✔ Prevent line break between two words
+✔ Keep formatting intact
+
+---
+
+# ✔ Example
+
+```html
+Hello&nbsp;&nbsp;World
+```
+
+This shows **two visible spaces**.
+
+-->
+ 
+<h2>Hello                  World</h2>  <!--no space -->
+
+<h2>Hello&nbsp;&nbsp;&nbsp;World</h2>  <!-- space provided by &nbsp; -->
+<p>This shows three visible spaces.</p>
+
+
+<hr>
+<!------------------------------------------------------------------------>
+
+            <h1>CODE TAG </h1>
+            <h1>used to display computer code, such as programming statements, commands, or snippets.</h1>
+<pre>
+<code>
+    #include < stdio.h>
+    int main() {
+    int num1, num2, sum;
+    printf("Enter two integers: ");
+    scanf("%d %d", &num1, &num2);
+    sum = num1 + num2;
+    printf("The sum of %d and %d is %d", num1, num2, sum);
+    return 0;
+}   
+
+</pre>
+
+
+<!------------------------------------------------------------------------>
+<pre>
+<code>
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;title&gt;Document&lt;/title&gt;
+&lt;/head>
+&lt;body&gt;
+   
+&lt;/body&gt;
+&lt;/html&gt;
+
+
+</code>
+</pre>
+
+<hr>
+<!---------------------------------------------------------------------->
+                             
+<!--                 # **Quotation Tags in HTML**
+
+Quotations appear frequently in web content, and HTML provides two semantic tags to represent them: **`<blockquote>`** for block-level quotations and **`<q>`** for inline quotations. This section explains how these tags work, when to use them, and how to style them.
+
+---
+
+## **What Are `<blockquote>` and `<q>` Tags?**
+
+HTML offers two different quotation elements:
+
+* **`<blockquote>`** — Used for **long, block-level quotes**, usually spanning multiple lines or paragraphs.
+
+* **`<q>`** — Used for **short, inline quotes** that appear within a sentence.
+
+Both tags add semantic meaning, helping browsers and search engines understand that the text is a quotation.
+
+---
+
+## **Why Use These Tags?**
+
+Using semantic quotation tags:
+
+* Improves **readability** and accessibility
+* Helps **SEO**, as search engines can interpret the structure better
+* Ensures consistent browser behavior for quotations
+
+
+## **Basic Syntax**
+
+### **`<blockquote>` Tag**
+
+```html
+<blockquote cite="source-url">
+  Quotation text here.
+</blockquote>
+```
+
+### **`<q>` Tag**
+
+```html
+<q cite="source-url">Quotation text here.</q>
+```
+
+---
+
+## **Attributes**
+
+Both tags support the **`cite`** attribute:
+
+* **`cite`**: Defines the URL or reference for the quote’s source.
+  (Note: Browsers don’t show it visually by default, but it adds semantic value.)
+
+---
+
+## **Practical Examples**
+
+### **Using `<blockquote>` for Long Quotes**
+
+```html
+<blockquote cite="https://example.com">
+  This is a long quote from an external source. This quote can span multiple lines
+  and paragraphs.
+</blockquote>
+```
+
+### **Using `<q>` for Short, Inline Quotes**
+
+```html
+The philosopher said,
+<q cite="https://example.com">The unexamined life is not worth living.</q>
+```
+
+---
+
+## **Styling with CSS**
+
+You can easily style quotation elements:
+
+```css
+blockquote {
+  padding: 10px 20px;
+  border-left: 4px solid #888;
+  font-style: italic;
+  background: #f9f9f9;
+}
+
+q {
+  quotes: "“" "”" "‘" "’";
+}
+```
+
+---
+
+## **Conclusion**
+
+The **`<blockquote>`** and **`<q>`** tags are essential for marking up quotations in a meaningful way. Using them improves both the structure and the searchability of your content. Once styled correctly, they enhance visual presentation and convey clear semantic intent. -->
+
+
+
+<h1> &lt;blockquote&gt; Tag </h1>
+
+<blockquote cite="source-url">
+  Quotation text here.
+</blockquote>
+
+<!---------------------------------------------------------------------->
+<hr>
+
+<h1> &lt;q&gt; Tag </h1>
+
+<q cite="source-url">Quotation text here.</q>
+
+<hr>
+<!------------------------------------------------------------------------>
+
+
+
+
+  
+</body>
+</html>

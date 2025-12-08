@@ -1,0 +1,27 @@
+/* CSS for ID */
+#myUniqueID {
+  background-color: yellow;
+}
+#myUniqueID1 {
+  background-color: rgb(167, 92, 145);
+}
+
+
+
+/*CSS FOR CLASS*/
+.myClass {
+  font-size: 18px;
+  background-color: aquamarine;
+}
+
+/*----------------------------------------------------------------------*/
+
+/* different classes */
+.red{
+  color:red;
+}
+
+.bg-yellow{
+  background-color: yellow ;
+}
+
