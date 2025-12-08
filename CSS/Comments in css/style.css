@@ -1,0 +1,24 @@
+/* This is a single-line comment */
+
+p {
+    /* color: red */
+}
+
+
+
+
+
+
+
+
+/* This is a
+multi-line
+comment */
+
+p {
+    /* color: red;
+       background-color: purple; */
+    color: purple;
+    background-color: red;
+}
+
