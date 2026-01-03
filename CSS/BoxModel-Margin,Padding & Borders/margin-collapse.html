@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin-Collapse</title>
+
+    <style>
+
+        .box1{
+            color:red;
+            background-color:yellow;
+            margin:25px;
+            border: 2px solid black;
+            padding:10px;
+         }
+
+        .box2{
+            color:rgb(255, 14, 146);
+            background-color: aquamarine;
+            margin:25px;
+            border: 2px solid black;
+            padding:10px;
+         }
+
+         h1{
+            color:red;
+            background-color: yellow;;
+         }
+
+         .y{
+            color:rgb(114, 109, 111)
+         }
+
+    </style>
+</head>
+<body>
+    <div class="box box1">i am box1 and my margin is set to 25px </div>
+
+    <div class="box box2">i am box2 and i have a margin of 25px</div>
+
+
+<h2 class="y">
+In the above boxes, Box1 and Box2 both have a margin of 25px on all sides. However, the vertical margins between them collapse, so only a single 25px space is visible between Box1 and Box2
+</h2>
+
+<pre>
+<h2>VERY VERY IMPORTANT NOTE: <br>
+Between box1 and box2:
+
+box1 has margin-bottom: 25px
+box2 has margin-top: 50px
+
+BUT the browser collapses them into ONE margin.
+
+<h1>Rule:
+The larger vertical margin wins.
+(Since 50px is larger than 25px, the visible gap is 50px.) </h1>
+
+</pre>
+</body>
+</html>

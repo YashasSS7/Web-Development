@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Box-Sizing Comparison</title>
+
+<style>
+    .container {
+        display: flex;
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .box {
+        width: 200px;
+        padding: 20px;
+        border: 10px solid black;
+        color: black;
+        font-weight: bold;
+    }
+
+    /* Default behaviour */
+    .content-box {
+        box-sizing: content-box;
+        background: #ffb3b3; /* Light red */
+    }
+
+    /* border-box behaviour */
+    .border-box {
+        box-sizing: border-box;
+        background: #b3ffb3; /* Light green */
+    }
+
+</style>
+</head>
+
+<body>
+
+<h2>Box-Sizing: Content-Box vs Border-Box</h2>
+
+<div class="container">
+
+    <div class="box content-box">
+        content-box  
+        <br>(Actual width > 200px)
+    </div>
+
+    <div class="box border-box">
+        border-box  
+        <br>(Exact width = 200px)
+    </div>
+
+</div>
+
+</body>
+</html>
