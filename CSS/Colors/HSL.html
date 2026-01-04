@@ -1,0 +1,44 @@
+<!--                                                             HSL
+
+HSL stands for hue, saturation, and lightness. This is another way to set colour properties.
+
+------------------------------------------------------------------------
+Breaking each keyword:
+
+Hue(h):-
+Hue represents the TYPE OF COLOR. It is measured in degrees, and its value lies from 0 to 360.
+0 degree represents black, 120 degree is for green, and 360 degree is for blue.
+
+Saturation(S):
+Saturation controls the INTENSITY or PURITY OF THE COLOR. It is measured in percentage, and its value lies between 0% and 100%.
+0% saturation is no color (grayscale), and 100% saturation is the most intense colour.
+
+Lightness(L):
+* Lightness determines how LIGHT or DARK the colour is. It is measured in percentage, and its value lies between 0% and 100%.
+* 0% lightness represents pure black, 50% lightness represents normal colour, and 100% lightness is pure white.
+
+-----------------------------------------------------------------------
+Syntax:
+selector {
+    color: hsl(hue, saturation, lightness);
+}
+
+
+Example: -->
+
+<head>
+    <style>
+        h1 {
+            color: hsl(235, 100%, 50%);
+        }
+        p {
+            color: hsl(0, 0%, 0%);
+        }
+    </style>
+</head>
+ 
+<body>
+    <h1>CodeWithHarry</h1>
+    <p>A Developer</p>
+</body>
+</html>

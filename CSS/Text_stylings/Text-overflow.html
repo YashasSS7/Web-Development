@@ -1,0 +1,101 @@
+<!--                                                   Text Overflow
+
+text-overflow specifies how overflowed inline text is displayed when it exceeds the container width.
+
+The text-overflow property specifies how overflowed content that is not displayed
+should be signaled to the user.
+
+Syntax:
+
+selector {
+    text-overflow: value;
+}
+
+Common values:
+
+clip     : cuts off the extra text (default) 
+ellipsis : shows ... 
+
+
+MANDATORY rules (very important) :-
+
+text-overflow will NOT work unless ALL three are present:
+
+1)width (or max-width)
+
+2)overflow: hidden
+
+3)white-space: nowrap
+-->
+
+<html lang="en">
+<head>
+    <style>
+        p {
+            width: 200px;
+            white-space: nowrap;
+            overflow: hidden;
+            border: 1px solid black;
+        }
+
+        #p1 {
+            text-overflow: clip;
+        }
+
+        #p2 {
+            text-overflow: ellipsis;
+    
+    </style>
+</head>
+<body>
+    <p id="p1">This is a very long text that will be clipped</p>
+    <p id="p2">This is a very long text that will show ellipsis</p>
+</body>
+</html>
+
+
+
+
+<!--
+
+One-line exam memory:
+
+clip → cut text
+
+ellipsis → show ...
+
+
+
+What happens step by step:-
+
+1)white-space: nowrap → text stays on one line
+
+2)Text becomes wider than 200px
+
+3)overflow: hidden → extra text is hidden
+
+4)text-overflow: ellipsis → shows ...
+
+------------------------------------------------------------------------
+
+Imagine water in a glass.
+
+Glass → div / paragraph
+
+Water → text
+
+Overflow → water going outside the glass
+
+Ellipsis (...) → warning sign
+
+
+white-space: nowrap;   /* don’t make glass taller */
+overflow: hidden;      /* don’t allow spilling */
+
+1)nowrap forces one single line, so the text is forced to overflow.
+
+
+2)overflow: hidden;
+ tells the browser: “Cut the extra text.”
+  Only after cutting, text-overflow decides how to show it (clip or ...).
+-->

@@ -1,0 +1,41 @@
+<!-- Write html and css code to style a paragraph inside a div
+which contains 5 other paragraphs. The first paragraph must have
+background color yellow and text color red. The other paragraphs
+must have background color blue and text color white. The HTML
+is written below for your reference. Do not change this html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paragraph Styling</title>
+
+    <style>
+        /* First paragraph inside the div */
+        div > p:first-child {
+            background-color: yellow;
+            color: red;
+        }
+
+        /* All other paragraphs inside the div */
+        div > p:not(:first-child) {
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <p>Paragraph 1</p>
+        <p>Paragraph 2</p>
+        <p>Paragraph 3</p>
+        <p>Paragraph 4</p>
+        <p>Paragraph 5</p>
+        <p>Paragraph 6</p>
+    </div>
+
+</body>
+</html>

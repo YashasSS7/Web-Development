@@ -1,0 +1,203 @@
+ <!--                                                   Text Decoration
+The text-decoration property adds various types of text decorations.
+
+Syntax:
+
+selector {
+    text-decoration: value;
+}
+
+There are four values for text-decoration:
+
+overline: adds a line above the text
+underline: adds a line below the text
+line-through: adds a line through the text.
+none: to remove decoration.
+-->
+
+<html lang="en">
+<head>
+    <style>
+        #y1 {text-decoration: overline;}
+        #y2 {text-decoration: underline;}
+        #y3 {text-decoration: line-through;}
+        #y4 {text-decoration: overline underline;}
+    </style>
+</head>
+<body>
+    <h2><pre>                   text-decoration           </pre></h2>
+
+    <p id="y1">text-decoration: overline</p>
+    <p id="y2">text-decoration: underline</p>
+    <p id="y3">text-decoration: line-through</p>
+    <p id="y4">text-decoration: overline underline</p>
+</body>
+</html>
+
+<hr>
+
+<!------------------------------------------------------------------------>
+<!--                                                   Text-Decoration-Color
+
+The text-decoration-color property sets the color of the text decoration.
+
+Syntax:
+
+selector {
+    text-decoration-color: value;
+}
+
+Common values:
+
+color-name: red, blue, green
+hex value: #ff0000
+rgb value: rgb(255, 0, 0)
+-->
+
+<html lang="en">
+<head>
+    <style>
+        #p1 {
+            text-decoration: underline;
+            text-decoration-color: red;
+        }
+
+        #p2 {
+            text-decoration: overline;
+            text-decoration-color: blue;
+        }
+
+        #p3 {
+            text-decoration: line-through;
+            text-decoration-color: green;
+        }
+
+        #p4 {
+            text-decoration: underline overline;
+            text-decoration-color: purple;
+        }
+    </style>
+</head>
+<body>
+    <h2><pre>                   text-decoration-color          </pre></h2>
+
+    <p id="p1">underline with red color</p>
+    <p id="p2">overline with blue color</p>
+    <p id="p3">line-through with green color</p>
+    <p id="p4">underline and overline with purple color</p>
+</body>
+</html>
+
+<hr>
+<!------------------------------------------------------------------------>
+<!--                                                   Text Decoration Style
+The text-decoration-style property defines the style of the text decoration line.
+
+Syntax:
+
+selector {
+    text-decoration-style: value;
+}
+
+Common values:
+
+solid   : default straight line
+double  : double line
+dotted  : dotted line
+dashed  : dashed line
+wavy    : wavy line
+-->
+
+<html lang="en">
+<head>
+    <style>
+        #p1 {
+            text-decoration: underline;
+            text-decoration-style: solid;
+        }
+
+        #p2 {
+            text-decoration: underline;
+            text-decoration-style: double;
+        }
+
+        #p3 {
+            text-decoration: underline;
+            text-decoration-style: dotted;
+        }
+
+        #p4 {
+            text-decoration: underline;
+            text-decoration-style: dashed;
+        }
+
+        #p5 {
+            text-decoration: underline;
+            text-decoration-style: wavy;
+        }
+    </style>
+</head>
+<body>
+    <h2><pre>                   text-decoration-style         </pre></h2>
+
+    <p id="p1">underline solid</p>
+    <p id="p2">underline double</p>
+    <p id="p3">underline dotted</p>
+    <p id="p4">underline dashed</p>
+    <p id="p5">underline wavy</p>
+</body>
+</html>
+
+<hr>
+
+<!------------------------------------------------------------------------>
+
+<!--                                                   Text Decoration Thickness
+The text-decoration-thickness property controls the thickness of the text decoration line.
+
+Syntax:
+
+selector {
+    text-decoration-thickness: value;
+}
+
+Common values:
+
+auto : browser default
+px   : fixed thickness (2px, 4px, etc)
+em   : relative to font size
+-->
+
+<html lang="en">
+<head>
+    <style>
+        #p1 {
+            text-decoration: underline;
+            text-decoration-thickness: auto;
+        }
+
+        #p2 {
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+        }
+
+        #p3 {
+            text-decoration: underline;
+            text-decoration-thickness: 4px;
+        }
+
+        #p4 {
+            text-decoration: underline;
+            text-decoration-thickness: 0.2em;
+        }
+    </style>
+</head>
+<body>
+    <h2><pre>                   text-decoration-thickness         </pre></h2>
+
+    <p id="p1">underline thickness auto</p>
+    <p id="p2">underline thickness 2px</p>
+    <p id="p3">underline thickness 4px</p>
+    <p id="p4">underline thickness 0.2em</p>
+</body>
+</html>

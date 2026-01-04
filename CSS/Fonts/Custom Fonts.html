@@ -1,0 +1,142 @@
+<!--    
+    We can also use custom fonts for our websites; here, we will be using Google Fonts.
+
+Follow the steps:
+
+Go to https://fonts.google.com/
+Select your preferred font.
+Choose the fonts based on font weight.
+Copy the import link and paste it on the top of the stylesheet.
+Copy the font family and paste it wherever you want to use it. -->
+
+<!-----------------------------------------------------------------------------------------------------------------------------
+
+## **2 methods of using fonts in Google Fonts**
+
+---
+
+## 1️⃣ **Using `<link>` tag** (MOST COMMON)
+
+You paste a `<link>` inside the `<head>` of your HTML.
+
+### Example:
+
+```html
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+```
+
+Then use it in CSS:
+
+```css
+body {
+  font-family: 'Roboto', sans-serif;
+}
+```
+
+✅ Simple
+✅ Preferred method
+✅ Faster loading
+
+--------------------------------------------------------------------
+
+## 2️⃣ **Using `@import` in CSS**
+
+You import the font inside your CSS file.
+
+### Example:
+
+```css
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+```
+
+❌ Slightly slower
+❌ Not recommended for performance
+
+---
+
+## One-line exam answer (IMPORTANT)
+
+> **Google Fonts can be used either by linking the font using the `<link>` tag in HTML
+ or
+ by importing it using `@import` in CSS.**
+
+---
+
+## Quick comparison (remember this)
+
+| Method    | Where | Recommended |
+| --------- | ----- | ----------- |
+| `<link>`  | HTML  | ✅ YES       |
+| `@import` | CSS   | ❌ NO        |
+
+-->
+<h1>USING IMPORT IN CSS</h1>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+        .poppins-regular {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+
+    <p class="poppins-regular">
+        This text is using Poppins font
+    </p>
+
+</body>
+</html>
+<!------------------------------------------------------------------------>
+
+<h1> USING &lt;LINK&gt; TAG</h1>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poppins Font Example</title>
+
+    <!-- Google Fonts preconnect (optional but good practice) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Font link -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <style>
+       
+        .poppins-regular {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+
+  
+
+ <p class="poppins-regular">
+        This text is using the Poppins Google Font.
+    </p>
+
+</body>
+</html>
+

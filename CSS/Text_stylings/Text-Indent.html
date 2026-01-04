@@ -1,0 +1,64 @@
+
+<!--                                                   Text Indent
+The text-indent property specifies the indentation of the first line of text.
+
+Syntax:
+
+selector {
+    text-indent: value;
+}
+
+Common values:
+
+px   : fixed indentation
+%    : relative to container width
+em   : relative to font size
+-->
+
+<html lang="en">
+<head>
+    <style>
+        #p1 {
+            text-indent: 30px;
+        }
+
+        #p2 {
+            text-indent: 10%;   /*10% is 10% of the parent element’s width, NOT font size.
+                                     If the paragraph width is 500px → indent = 50px.*/
+        }
+
+        #p3 {
+            text-indent: 2em;   /*1em = current font size ,If font-size = 16px → 2em = 32px*/
+        }
+
+        #p4 {
+            text-indent: -20px;
+        }
+    </style>
+</head>
+<body>
+    <p id="p1">
+        This paragraph has a text-indent of 30px. Only the first line is indented.
+    </p>
+
+    <p id="p2">
+        This paragraph has a text-indent of 10 percent.
+    </p>
+
+    <p id="p3">
+        This paragraph has a text-indent of 2em.
+    </p>
+
+<hr>
+
+    <p id="p4">
+         This paragraph has a negative text-indent value.
+         <pre>
+        The first line moves LEFT
+
+        It goes outside the normal text area
+
+        This is called negative indent.
+    </p>
+</body>
+</html>

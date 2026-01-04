@@ -1,0 +1,172 @@
+<!--                                                      FONT SIZE
+                                                      
+The font size property sets the size of the fonts.
+
+It has some predefined sizes, such as small, medium, large, larger, etc.
+
+The most commonly used units for font size are px (pixels), em (ems), rem (root ems), and percentage (%).
+
+Quick notes:
+
+## Think of **font-size** as a **number**.
+
+Everything below is just **how that number is calculated**.
+
+----------------------------------------------------------------------------------------------------------------------
+
+## 1️⃣ `px` — **Fixed size (no math)**
+
+* `1px = 1 pixel`
+* Does **NOT** depend on anything else.
+
+```css
+p {
+  font-size: 16px;
+}
+```
+
+👉 Always **16px**, no matter where the element is.
+
+**Use when:** you want exact control.
+
+-------------------------------------------------------------------------------------------------------------------------
+## 2️⃣ `em` — **Depends on parent**(parent is the element directly above another element)
+
+* `1em = font-size of the parent`
+* It **multiplies** as it goes down.
+
+### Example:
+
+```css
+div {
+  font-size: 20px;
+}
+
+p {
+  font-size: 1.5em;
+}
+```
+
+👉 `p` font-size = `20px × 1.5 = 30px`
+
+⚠️ **Problem with em:**
+If nested, it keeps multiplying.
+
+```css
+div { font-size: 20px; }
+div p { font-size: 1.5em; }   /* 30px */
+div p span { font-size: 1.5em; } /* 45px 😵 */
+```
+
+-------------------------------------------------------------------------------------------------------------------------
+
+
+## 3️⃣ `rem` — **Depends only on `<html>`**
+
+* `1rem = font-size of <html>`
+* NO multiplying problem.
+
+```css
+html {
+  font-size: 16px;
+}
+
+p {
+  font-size: 1.5rem;
+}
+```
+
+👉 `p` font-size = `16px × 1.5 = 24px`
+Even if deeply nested — **still 24px**.
+
+✅ **Best for consistent layouts**
+
+rem means ONLY the <html> element
+1rem = font-size of <html>
+-------------------------------------------------------------------------------------------------------------------------
+
+
+## 4️⃣ `%` — **Percentage of parent**
+
+* `100% = parent’s font-size`
+
+```css
+div {
+  font-size: 20px;
+}
+
+p {
+  font-size: 150%;
+}
+```
+
+👉 `p` font-size = `20px × 150% = 30px`
+
+📌 `%` behaves like `em`, just written differently.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+
+## 🔥 ONE SIMPLE RULE (MEMORIZE THIS)
+
+| Unit  | Depends on |
+| ----- | ---------- |
+| `px`  | Nothing    |
+| `em`  | Parent     |
+| `rem` | `<html>`   |
+| `%`   | Parent     |
+
+---
+
+## 🧠 Real-life analogy
+
+* **px** → Fixed ruler
+* **em / %** → Depends on parent’s size
+* **rem** → Depends on building’s main rule (`<html>`)
+. -->
+
+
+
+
+
+
+<html lang="en">
+<head>
+    <style>
+        #p1 {
+            font-size: small;
+        }
+        #p2 {
+            font-size: medium;
+        }
+        #p3 {
+            font-size: large;
+        }
+        #p4 {
+            font-size: larger;
+        }
+        #p5 {
+            font-size: 25px;
+        }
+        #p6 {
+            font-size: 2em;
+        }
+        #p7 {
+            font-size: 2rem;
+        }
+        #p8 {
+            font-size: 100%;
+        }
+    </style>
+</head>
+<body>
+    <p id="p1">font-size: small</p>
+    <p id="p2">font-size: medium</p>
+    <p id="p3">font-size: large</p>
+    <p id="p4">font-size: larger</p>
+    <p id="p5">font-size: 25px</p>
+    <p id="p6">font-size: 2em</p>
+    <p id="p7">font-size: 2rem</p>
+    <p id="p8">font-size: 100%</p>
+</body>
+</html>

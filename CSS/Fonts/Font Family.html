@@ -1,0 +1,68 @@
+<!--                                                   Font Family
+
+The font family property specifies the font stack. This is used to set the preferred font for the text content.
+
+We can define multiple font family names separated by commas based on priority.
+
+Syntax:
+
+selector {
+    font-family: font1, font2, font3;
+}
+
+-->
+
+<html lang="en">
+<head>
+    <style>
+        h1 {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        h2 {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        #a{color:red; }
+        #b{color:rgb(0, 26, 255);}
+
+    </style>
+</head>
+<body>
+    <h1>CodeWithHarry</h1>
+    <h2>Hello World</h2>
+</body>
+</html>
+
+
+<pre id="a">
+NOTE :
+WHY 3 FONT FAMILIES
+Eg: font-family: 'Times New Roman', Times, serif;
+
+Order:
+Try Times New Roman
+If not available → try Times
+If still not → use any serif font
+
+</pre>
+
+
+
+
+    <pre id="b">
+                                    Generic Font Family
+
+There are five generic font family names that serve as fallback options when specific fonts are not available:
+
+serif :- generic serif fonts (like Times New Roman).
+
+sans-serif :- generic sans-serif fonts (like Arial or Helvetica).
+
+monospace : generic monospaced fonts (like Courier New).
+
+cursive : generic cursive fonts (for handwritten styles).
+
+fantasy : generic fantasy fonts (for decorative styles).
+
+Tip: It is recommended to end the font family with any of these generic font family names.
+  </pre>
