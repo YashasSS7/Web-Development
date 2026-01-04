@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Elements Demo</title>
+
+    <style>
+        /* =========================
+           PSEUDO-ELEMENTS
+           ========================= */
+
+        /* p::before
+           Inserts content BEFORE the actual text of each <p>
+           This content is added using CSS, not HTML
+           The 'content' property is mandatory */
+        p::before {
+            content: "👉 ";
+        }
+
+        /* p::after
+           Inserts content AFTER the actual text of each <p>
+           Commonly used for icons, symbols, or labels
+           Requires the 'content' property */
+        p::after {
+            content: " ✔";
+            color: green;
+        }
+
+       
+    </style>
+</head>
+
+<body>
+
+    <h2>Pseudo-Elements Example (::before & ::after)</h2>
+
+    <p>This is paragraph one</p>
+    <p>This is paragraph two</p>
+    <p>This is paragraph three</p>
+
+</body>
+</html>

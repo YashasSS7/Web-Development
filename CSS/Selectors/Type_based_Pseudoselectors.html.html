@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type-Based Pseudo Selectors</title>
+
+    <style>
+        /* =========================
+           TYPE-BASED PSEUDO-SELECTORS
+           ========================= */
+
+        /* Selects the FIRST <p> element of its type
+           inside its parent */
+        p:first-of-type {
+            font-weight: bold;
+            background-color: lightblue;
+        }
+
+        /* Selects the LAST <p> element of its type
+           inside its parent */
+        p:last-of-type {
+            text-decoration: underline;
+            background-color: lightgreen;
+        }
+
+        /* Selects the 3rd <p> element of its type
+           inside its parent */
+        p:nth-of-type(3) {
+            background-color: gold;
+        }
+
+        /* Basic styling for clarity */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        div {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Type-Based Pseudo-Selectors Demo</h2>
+
+    <div>
+        <h3>I am a heading</h3>
+
+        <p>Paragraph 1 (first-of-type)</p>
+        <p>Paragraph 2</p>
+        <p>Paragraph 3 (nth-of-type(3))</p>
+        <p>Paragraph 4 (last-of-type)</p>
+    </div>
+
+    <div>
+        <p>Another section - Paragraph 1 (first-of-type)</p>
+        <p>Another section - Paragraph 2</p>
+        <p>Another section - Paragraph 3 (last-of-type)</p>
+    </div>
+
+</body>
+</html>
+
+<!-- 🔑 CRITICAL DIFFERENCE (very important)
+
+   p:nth-child(3)
+   → counts ALL elements (h1, p, div, etc.)
+
+   p:nth-of-type(3)
+   → counts ONLY <p> elements
+
+   ------------------------------------
+   Example to remember:
+
+   HTML structure:
+   <div>
+       <h1>Title</h1>
+       <p>Paragraph 1</p>
+       <p>Paragraph 2</p>
+   </div>
+
+   Explanation:
+   - p:nth-child(2) ❌
+     → No match, because the 2nd child is <p> but it is the FIRST <p>
+
+   - p:nth-of-type(2) ✅
+     → Selects "Paragraph 2"
+
+     
+     -->

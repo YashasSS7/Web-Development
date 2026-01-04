@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-selectors</title>
+    
+    <style>
+
+   /* --------------------------
+   Pseudo-Selectors for Links
+   -------------------------- */
+
+/* a:link
+   Styles a link that has NOT been visited yet */
+a:link {
+    color: green;
+}
+
+/* a:visited
+   Styles a link that the user has already visited */
+a:visited {
+    color: rgb(255, 0, 144);
+}
+
+/* a:hover
+   Applies when the mouse pointer is placed over the link */
+a:hover {
+    background-color: violet;
+}
+
+/* a:active
+   Applies while the link is being clicked (mouse button pressed) */
+a:active {
+    background-color: red;
+}
+
+/* a:focus
+   Applies when the link is focused using keyboard (Tab key) */
+a:focus {
+    outline: 2px solid black;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------- */
+
+        /* --------------------------
+           Structural Pseudo-selector
+           -------------------------- */
+
+        /* First <p> inside parent */
+        p:first-child {
+            background-color: aqua;
+        }
+
+        /* Last <p> inside parent */
+        p:last-child {
+            background-color: lightgreen;
+        }
+
+        /* 2nd child */
+        p:nth-child(2) {
+            border: 2px solid blue;
+        }
+
+        /* All odd-numbered children */
+        p:nth-child(odd) {
+            color: rgb(241, 12, 77);
+        }
+
+        /* All even-numbered children */
+        p:nth-child(even) {
+            color: rgb(0, 240, 0);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <a href="https://www.google.com">Go To GOOGLE</a>
+        <a href="https://www.youtube.com">Go To YouTube</a>
+        <a href="https://www.nammacoders.com">Go To nammacoders</a>
+    </div>
+
+    <main class="one">
+
+        <p>1️⃣ I am first</p>       <!-- first-child + odd -->
+        <p>2️⃣ I am second</p>      <!-- nth-child(2) + even -->
+        <p>3️⃣ I am third</p>       <!-- odd -->
+        <p>4️⃣ I am fourth</p>      <!-- even -->
+        <p>5️⃣ I am fifth</p>       <!-- odd -->
+        <p>6️⃣ I am last</p>        <!-- last-child + even -->
+
+    </main>
+
+</body>
+</html>
+
+
+
+

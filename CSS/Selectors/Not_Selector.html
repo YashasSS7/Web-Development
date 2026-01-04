@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style> 
+
+    /* -------------------------Structural Pseudo-selector-------------------------- */
+
+        /* First <p> inside parent */
+        p:first-child {
+            color:orange;
+            background-color: aqua;
+        }
+
+    /* =========================NOT SELECTOR========================= */
+        p:not(:first-child) {
+            
+            color:red;
+            background-color: yellow;
+        }
+        
+        </style>
+</head>
+<body>
+     
+    <div>
+        <p>i am first child</p>
+        <p>i am second child</p>
+        <p>i am third child</p>
+        <p>i am fourth child</p>
+        <p>i am fifth child</p>
+
+    </div>
+
+</body>
+</html>

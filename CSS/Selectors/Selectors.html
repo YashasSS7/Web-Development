@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selectors</title>
+
+<style>
+
+/* 1. Element selector */
+
+h1 {
+    color: red;
+    background-color: yellow;
+}
+
+
+/*----------------------------------------------------------------------------------------------------------------------------- */
+/* 2. Class selector */
+
+.red {
+    color: red;
+    background-color:yellow;
+}
+
+.green {
+    color: white;
+    background-color: green;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------- */
+/*3.Id selector*/
+
+#green{
+    background-color: green;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------- */
+/*4.Child Selector*/
+div > p {
+    color:blue;
+    background-color: white;
+}
+/*----------------------------------------------------------------------------------------------------------------------------- */
+/*5.Descendant Selector*/
+
+div p {
+  color: blue;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------- */
+/*6.universal Selector
+Selects all elements on the page */
+* {
+  margin: 1;
+  padding:1;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------- */
+
+</style>
+</head>
+
+
+
+
+
+
+<body>
+
+    <!--1. Element selector -->
+<h1>I am Element selector</h1>   
+
+/* Disadvantage: Affects ALL Elements of That Type */
+/* If you style p { color: red; }, every <p> tag becomes red. */
+
+
+<hr>
+<!------------------------------------------------------------------------>
+
+<!-- 2. Class selector -->
+<div class="red">i am class selector (red)</div>
+<div class="green">i am class selector (green)</div>
+
+
+<hr>
+<!------------------------------------------------------------------------>
+
+<!--3.ID selector-->
+<h1 id="green"> id selector</h1>
+
+<hr>
+<!------------------------------------------------------------------------>
+
+<!--4.Child Selector
+Child selector selects only the direct children of a parent element-->
+
+<div>
+    <p> child selector</p>
+    
+</div>
+
+Disadvantage of child selector: It only targets direct children, so deeper nested elements won’t be styled unless you write extra selectors.
+
+Eg:-<div>
+    <p>Direct child → will turn red</p>
+     <!--only this will be colored bacause it is the direct child of p-->
+
+    <section>
+        <p>Nested inside another tag → NOT red (child selector can't reach)</p>
+        <!--it is not the direct child of div its inside section tag which is inside div tag-->
+    </section>
+</div>
+
+<hr>
+<!------------------------------------------------------------------------>
+<!--5.Descendant Selector
+Selects all elements inside another element, at any depth.-->
+
+<div>
+    <p>Paragraph 1 — inside div (styled)</p>
+
+    <section>
+        <p>Paragraph 2 — nested deeper inside div (styled)</p>
+    </section>
+</div>
+
+<p>Paragraph 3 — outside div (NOT styled)</p>
+
+<hr>
+<!------------------------------------------------------------------------>
+
+
+
+</body>
+</html>
