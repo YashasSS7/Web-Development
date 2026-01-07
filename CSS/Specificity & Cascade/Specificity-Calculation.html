@@ -1,0 +1,117 @@
+<!--                                                Specificity Calculation
+
+To calculate specificity, assign a value to each part of the selector:
+
+1)Universal Selector: 0
+2)Element selectors and pseudo-elements: 1
+3)Class selectors, attribute selectors, and pseudo-classes: 10
+4)ID selectors: 100
+5)Inline styles: 1000
+6)!important  gets a specificity score of 10,000 points :- 
+!important does NOT add numeric specificity.
+It overrides the normal cascade completely.
+(Some people loosely say 10000, but this is NOT official.)
+
+ 
+Then, add up the values of all the parts in the selector.
+
+Here is an example:
+
+<h1 id="title" class="h1">CodeWithHarry</h1>
+
+Here, the specificity value will be 111 because
+ID has a specificity of 100, 
+class has a specificity of 10
+h1 element has a specificity of 1.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Specificity Calculation</title>
+
+  <style>
+    /* =====================================================
+       SPECIFICITY POINT SYSTEM (for understanding)
+       -----------------------------------------------------
+       Universal selector (*)            → 0
+       Element / pseudo-elements         → 1
+       Class / attribute / pseudo-class  → 10
+       ID selectors                      → 100
+       Inline styles                     → 1000
+       !important → overrides all (not numeric)
+       ===================================================== */
+
+    /* 1️⃣ Element selector
+       Specificity = 1 */
+    h1 {
+      color: blue;
+    }
+
+    /* 2️⃣ Class selector
+       Specificity = 10 */
+    .heading {
+      color: green;
+    }
+
+    /* 3️⃣ ID selector
+       Specificity = 100 */
+    #title {
+      color: orange;
+    }
+
+    /* 4️⃣ Element + Class
+       Specificity = 1 + 10 = 11 */
+    h1.heading {
+      color: purple;
+    }
+
+    /* 5️⃣ ID + Class
+       Specificity = 100 + 10 + 1 = 110 */
+    #title .heading {
+      color: rgb(255, 0, 255);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Parent with ID -->
+  <div id="title">
+
+    <!-- Target element -->
+    <!-- Inline style present (Specificity = 1000) -->
+    <h1 class="heading" style="color:rgb(11, 255, 88);">
+      CSS Specificity Calculation Example
+    </h1>
+
+  </div>
+
+</body>
+</html>
+
+<!--                                              Quick Quiz
+
+What will be the specificity value of the following selector:
+
+a.harryclass.rohan-class[href]:hover {
+  color: red;
+}
+
+Solution
+To calculate the specificity value of the selector a.harryclass.rohan-class[href]:hover, you can break down its components:
+
+Element selectors: a contributes 1 point.
+Class selectors: .harryclass and .rohan-class each contribute 10 points, totaling 20 points.
+Attribute selector: [href] contributes 10 points.
+Pseudo-class: :hover adds another 10 points.
+
+Add up all these values:
+
+1 (element) + 20 (classes) + 10 (attribute) + 10 (pseudo-class) = 41.
+
+So, the specificity value of the selector a.harryclass.rohan-class[href]:hover will be 41.
+
+-->
