@@ -1,0 +1,139 @@
+<!--
+## 📱 What does **viewport** mean?
+
+**Viewport = the visible browser screen area**
+
+It has **two sides**:
+
+* **Width** (left ↔ right)
+* **Height** (top ↕ bottom)
+
+----------------------------------------------------------------------------
+What are vmin and vmax?
+
+They are viewport-based CSS units.
+
+vmin → 1% of the smaller viewport side
+
+vmax → 1% of the larger viewport side
+
+-----------------------------------------------------------------------------
+
+## 🔹 “Smaller viewport side” — means WHAT?
+
+It simply means:
+
+> **Whichever is smaller: width or height**
+
+
+### Example 1️⃣
+
+Screen size: **1200px (width) × 800px (height)**
+
+* Smaller side → **800px (height)**
+* Larger side → **1200px (width)**
+
+So:
+
+* `1vmin = 1% of 800px = 8px`
+* `1vmax = 1% of 1200px = 12px`
+
+---
+
+### Example 2️⃣ (Mobile portrait)
+
+Screen size: **360px (width) × 640px (height)**
+
+* Smaller side → **360px (width)**
+
+So:
+
+* `1vmin = 3.6px`
+* `1vmax = 6.4px`
+
+---
+
+### Example 3️⃣ (Landscape)
+
+Screen size: **640px (width) × 360px (height)**
+
+* Smaller side → **360px (height)**
+
+So:
+
+* `1vmin = 3.6px`
+* `1vmax = 6.4px`
+
+---
+
+## 🔁 Why this is useful
+
+If you write:
+
+```css
+box {
+  width: 30vmin;
+  height: 30vmin;
+}
+```
+
+The box:
+
+* **Always fits inside the screen**
+* Never overflows
+* Works in portrait & landscape
+
+---
+
+## 🧠 Ultra-simple memory line
+
+> **vmin = 1% of the shorter screen side**
+> **vmax = 1% of the longer screen side**
+
+-->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>vmin vs vmax Demo</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .vmin-box {
+      width: 20vmin;
+      height: 20vmin;
+      background: lightcoral;
+      margin: 20px;
+    }
+
+    .vmax-box {
+      width: 20vmax;
+      height: 20vmax;
+      background: lightseagreen;
+      margin: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="vmin-box">
+    20vmin<br>
+    (based on smaller side)
+  </div>
+
+  <div class="vmax-box">
+    20vmax<br>
+    (based on larger side)
+  </div>
+
+</body>
+</html>

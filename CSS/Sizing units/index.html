@@ -1,0 +1,151 @@
+                                                      
+                                                      <!--FIRST READ READ.MD-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Sizing Units Demo</title>
+
+  <style>
+    /* =====================================================
+       ROOT FONT SIZE
+       1rem = 16px (default browser setting)
+       ===================================================== */
+    html {
+      font-size: 16px;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    /* =====================================================
+       PX (Absolute unit)
+       Fixed size, does NOT scale with screen
+       ===================================================== */
+    .px-box {
+      width: 200px;
+      height: 100px;
+      background: lightcoral;
+      margin-bottom: 20px;
+    }
+
+    /* =====================================================
+       EM (Relative to parent font-size)
+       Parent font-size = 20px
+       1em = 20px here
+       ===================================================== */
+    .em-parent {
+      font-size: 20px;
+    }
+
+    .em-child {
+      font-size: 1.5em; /* 1.5 × 20px = 30px */
+      background: lightblue;
+      padding: 1em;     /* padding also scales */
+      margin-bottom: 20px;
+    }
+
+    /* =====================================================
+       REM (Relative to root <html>)
+       1rem = 16px ALWAYS
+       ===================================================== */
+    .rem-text {
+      font-size: 1.5rem; /* 1.5 × 16px = 24px */
+      background: lightgreen;
+      padding: 1rem;
+      margin-bottom: 20px;
+    }
+
+    /* =====================================================
+       PERCENTAGE (%)
+       Width is relative to parent width
+       ===================================================== */
+    .percent-parent {
+      width: 400px;
+      border: 2px solid black;
+      margin-bottom: 20px;
+    }
+
+    .percent-child {
+      width: 50%; /* 50% of 400px = 200px */
+      height: 50px;
+      background: khaki;
+    }
+
+    /* =====================================================
+       VIEWPORT UNITS (vw, vh)
+       Relative to browser window size
+       ===================================================== */
+    .viewport-box {
+      width: 50vw;  /* 50% of viewport width */
+      height: 20vh; /* 20% of viewport height */
+      background: plum;
+      margin-bottom: 20px;
+    }
+
+    /* =====================================================
+       CH UNIT
+       Width based on character "0"
+       Useful for inputs and text areas
+       ===================================================== */
+    .ch-box {
+      width: 20ch; /* approx width of 20 characters */
+      padding: 10px;
+      background: lightgray;
+      margin-bottom: 20px;
+    }
+
+    /* =====================================================
+       FR UNIT (CSS Grid only)
+       Fraction of available space
+       ===================================================== */
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 10px;
+    }
+
+    .grid div {
+      background: lightseagreen;
+      padding: 20px;
+      color: white;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>PX (Absolute)</h2>
+  <div class="px-box">200px × 100px</div>
+
+  <h2>EM (Relative to Parent)</h2>
+  <div class="em-parent">
+    <div class="em-child">1.5em text (30px)</div>
+  </div>
+
+  <h2>REM (Relative to Root)</h2>
+  <div class="rem-text">1.5rem text (24px)</div>
+
+  <h2>Percentage (%)</h2>
+  <div class="percent-parent">
+    <div class="percent-child">50% width</div>
+  </div>
+
+  <h2>Viewport Units (vw / vh)</h2>
+  <div class="viewport-box">Resize window</div>
+
+  <h2>CH Unit</h2>
+  <div class="ch-box">20ch wide</div>
+
+  <h2>FR Unit (Grid)</h2>
+  <div class="grid">
+    <div>1fr</div>
+    <div>2fr</div>
+  </div>
+
+</body>
+</html>
