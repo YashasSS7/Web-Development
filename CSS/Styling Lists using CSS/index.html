@@ -1,0 +1,80 @@
+<!--                  this file is made by me,not correctly done ,refer (next file same content in correct order)
+                  
+Topics discussed : list style type ,list style position ,list style image
+                     that's it ,rest all basics -->
+
+
+
+
+
+<!--                                         Lists consist of two parts
+
+Every list item (<li>) is made of:
+
+1)Marker :The bullet or number (•, 1., A., etc.)
+
+2)Content :The actual text inside the list item -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>styling Lists using css</title>
+</head>
+
+<style>
+
+
+    .overall ul li {
+
+        list-style-type: disc;
+        list-style-type: devanagari;
+        list-style-type: none;
+
+
+        background-color: yellow;
+        /*but it applies only to content ,not to that marker (like dot ,disc shapes)*/
+        list-style-position: inside;
+        /* so this line adds bgcolor to that marker also*/
+
+        border: 2px solid black;
+
+        list-style-image: url(demo\ image.jpg);
+    }
+
+
+
+
+    .nav ul li {
+        list-style: none;
+        display: inline-block;
+        padding: 23px;
+    }
+
+</style>
+
+<body>
+    <nav class="overall">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+
+
+
+    <nav class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+</body>
+
+
+
+</html>

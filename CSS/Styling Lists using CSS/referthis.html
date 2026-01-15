@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling Lists Using CSS</title>
+
+    <style>
+        /* ----------------------------------
+           LIST: Marker + Content example
+        ---------------------------------- */
+
+        .overall ul li {
+            list-style-type: disc;          /* marker */
+            list-style-position: inside;    /* marker becomes part of content box */
+
+            background-color: yellow;       /* now applies to marker + content */
+            border: 2px solid black;
+            padding: 10px;
+            margin-bottom: 8px;
+        }
+
+       
+
+        /* ----------------------------------
+           NAVIGATION LIST
+        ---------------------------------- */
+
+        .nav ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav ul li {
+            list-style: none;               /* removes marker */
+            display: inline-block;
+
+            padding: 2px 10px;
+            background-color: lightblue;
+            border: 1px solid black;
+            margin-right: 5px;
+        }
+
+        .nav ul li:hover {
+            background-color: deepskyblue;
+            cursor: pointer;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+
+    <!-- Explanation:
+         Lists consist of two parts:
+         1) Marker  → bullet / number
+         2) Content → text inside <li>
+    -->
+
+    <h2>Normal List (Marker + Content)</h2>
+    <nav class="overall">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+
+    
+
+    <h2>Navigation List</h2>
+    <nav class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+
+</body>
+</html>
