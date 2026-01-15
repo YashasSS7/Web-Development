@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Inline vs Flex – One File Demo</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h2 {
+      margin-top: 40px;
+      border-bottom: 2px solid black;
+    }
+
+    .box {
+      background: lightblue;
+      border: 2px solid black;
+      padding: 10px;
+      margin: 5px;
+    }
+
+    /* =====================
+       INLINE (TEXT FLOW)
+       ===================== */
+    .inline-demo span {
+      display: inline;           /* behaves like text */
+      width: 100px;              /* ignored */
+      height: 50px;              /* ignored */
+    }
+
+    /* =====================
+       FLEX (LAYOUT CONTROL)
+       ===================== */
+    .flex-demo {
+      display: flex;             /* enables 1D layout */
+      justify-content: space-between;
+      background: #d7c8c8;
+      padding: 10px;
+    }
+
+    .flex-demo .box {
+      width: 80px;               /* works */
+      text-align: center;
+    } 
+  </style>
+</head>
+
+<body>
+
+  <h1> inline vs flex </h1>
+
+  <!-- INLINE -->
+  <h2>display: inline (Text Flow)</h2>
+  <p>
+    Inline elements behave like <strong>words in a sentence</strong>.
+    You cannot control spacing or alignment.
+  </p>
+
+  <div class="inline-demo">
+    <span class="box">A</span>
+    <span class="box">B</span>
+    <span class="box">C</span>
+  </div>
+
+  <!-- FLEX -->
+  <h2>display: flex (1D Layout)</h2>
+  <p>
+    Flex makes the parent control how children are arranged.
+    Spacing and alignment are fully controllable.
+  </p>
+
+  <div class="flex-demo">
+    <div class="box">A</div>
+    <div class="box">B</div>
+    <div class="box">C</div>
+  </div>
+
+</body>
+</html>

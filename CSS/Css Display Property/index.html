@@ -1,0 +1,166 @@
+<!--                                                   Display
+                                                   
+The display property in CSS specifies how an element is displayed in the document flow. 
+It defines whether an element behaves like a block, inline, flex, grid, or even becomes hidden.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Display Property – Complete Demo</title>
+
+    <style>
+        /* =========================
+           COMMON STYLES
+           ========================= */
+
+        /* Applies to entire page */
+        body {
+            font-family: Arial, sans-serif; /* Simple readable font */
+            padding: 20px;                 /* Space from browser edges */
+        }
+
+        /* Section headings */
+        h2 {
+            margin-top: 40px;              /* Space before each demo */
+            border-bottom: 2px solid #000; /* Visual separation */
+        }
+
+        /* Shared box styling */
+        .box {
+            background-color: lightblue;   /* Visible background */
+            border: 2px solid black;       /* Show element boundary */
+            padding: 10px;                 /* Inner space */
+            margin: 5px;                   /* Outer space */
+        }
+
+        /* =========================
+           DISPLAY TYPES
+           ========================= */
+
+        /* display: block
+           - Takes full width
+           - Starts on a new line
+        */
+        .block {
+            display: block;
+        }
+
+        /* display: inline
+           - Takes only content width
+           - Does NOT start on new line
+           - width & height do NOT apply
+        */
+        .inline {
+            display: inline;
+            width: 200px;   /* ignored */
+            height: 50px;   /* ignored */
+        }
+
+        /* display: inline-block
+           - Stays in same line
+           - width & height WORK
+        */
+        .inline-block {
+            display: inline-block;
+            width: 200px;
+            height: 50px;
+        }
+
+        /* display: none
+           - Element is completely removed
+           - No space in layout
+        */
+        .none {
+            display: none;
+        }
+
+        /* display: flex
+           - Enables 1D layout (row by default)
+           - Controls child alignment
+        */
+        .flex-container {
+            display: flex;
+            gap: 10px;                    /* Space between flex items */
+            background-color: #eee;
+            padding: 10px;
+        }
+
+        /* display: grid
+           - Enables 2D layout (rows + columns)
+        */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+            gap: 10px;
+            background-color: #eee;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS display Property – Complete Example</h1>
+
+    <!-- =========================
+         BLOCK
+         ========================= -->
+    <!-- Each div takes full width and moves to next line -->
+    <h2>display: block</h2>
+    <div class="box block">Block 1</div>
+    <div class="box block">Block 2</div>
+
+    <!-- =========================
+         INLINE
+         ========================= -->
+    <!-- span stays in same line and ignores width/height -->
+    <h2>display: inline</h2>
+    <span class="box inline">Inline 1</span>
+    <span class="box inline">Inline 2</span>
+
+    <!-- =========================
+         INLINE-BLOCK
+         ========================= -->
+    <!-- Behaves like inline but allows width/height -->
+    <h2>display: inline-block</h2>
+    <div class="box inline-block">Inline-block 1</div>
+    <div class="box inline-block">Inline-block 2</div>
+
+    <!-- =========================
+         NONE
+         ========================= -->
+    <!-- Hidden element is removed completely -->
+    <h2>display: none</h2>
+    <div class="box">Visible Box</div>
+    <div class="box none">Hidden Box (display: none)</div>
+    <div class="box">Visible Box</div>
+
+    <!-- =========================
+         FLEX
+         ========================= -->
+    <!-- Children arranged in a row (1D layout) -->
+    <h2>display: flex</h2>
+    <div class="flex-container">
+        <div class="box">Flex 1</div>
+        <div class="box">Flex 2</div>
+        <div class="box">Flex 3</div>
+    </div>
+
+    <!-- =========================
+         GRID
+         ========================= -->
+    <!-- Children arranged in rows and columns (2D layout) -->
+    <h2>display: grid</h2>
+    <div class="grid-container">
+        <div class="box">Grid 1</div>
+        <div class="box">Grid 2</div>
+        <div class="box">Grid 3</div>
+        <div class="box">Grid 4</div>
+        <div class="box">Grid 5</div>
+        <div class="box">Grid 6</div>
+    </div>
+
+</body>
+</html>
+
