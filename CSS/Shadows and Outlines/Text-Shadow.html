@@ -1,0 +1,89 @@
+<!--                                                             
+                                                             Text Shadows
+- text-shadow is utilized to give shadows specifically to the text. 
+- It can elevate the readability of the text or give it an elegant appearance.
+
+Syntax:
+
+text-shadow: h-offset v-offset blur color;
+
+Example 1 : Elegant Text Shadow
+
+.heading {
+  font-size: 40px;
+  color: #333;
+  
+  text-shadow: 2px 2px 4px #888888;
+}
+Adds a soft grey shadow under the text.
+-----------------------------------------------------------------------------------------------------
+Example 2: Glow Effect
+
+.glow {
+  font-size: 40px;
+  color: white;
+  text-shadow: 0 0 10px #00f,
+               0 0 20px #00f,
+               0 0 30px #00f;
+}
+Multiple shadows can create a neon glow effect.
+
+0 0 10px in text-shadow means:
+
+First 0 → Horizontal offset
+(no left or right shift)
+
+Second 0 → Vertical offset
+(no up or down shift)
+
+10px → Blur radius
+(how soft and spread the shadow is)
+
+So, 0 0 10px creates a blurred glow evenly around the text, not a shadow in any specific direction. 
+ so similarly 3 shadow lines
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Shadow Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f9f9f9;
+        }
+
+        .heading {
+            font-size: 40px;
+            color: #f20000;
+
+            text-shadow: 10px 30px 2px #ffd900;
+            margin-bottom: 50px;
+        }
+
+        .glow {
+            font-size: 40px;
+            color: white;
+            background: black;
+            display: inline-block;
+            padding: 10px;
+            text-shadow: 0 0 10px #00f, 0 0 20px #00f, 0 0 30px #00f;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Text Shadow Example</h2>
+
+    <div class="heading">Elegant Text Shadow</div><br>
+    <div class="glow">Glowing Text Effect</div>
+
+</body>
+
+</html>

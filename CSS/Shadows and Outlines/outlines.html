@@ -1,0 +1,106 @@
+<!--                                                               Outlines
+
+An outline is a line that is drawn around elements, OUTSIDE THE BORDER , to make the element "stand out". 
+
+It's commonly used for accessibility purposes, like highlighting focused elements.
+
+Syntax:
+outline: width style color;
+
+-width: Sets the outline width.
+-style: Determines the style of the outline such as solid, dotted, or dashed.
+-color: Sets the outline color.
+
+-----------------------------------------------------------------------------------------------------
+Example 1: Focused Button
+
+.button:focus {
+  outline: 2px solid blue;
+}
+When the button is focused, it gets a blue outline.
+
+
+- .button targets elements with the class button.
+
+- :focus is a pseudo-class that applies styles when the element is focused (for example, when clicked or navigated to using the keyboard with the Tab key).
+
+- outline: 2px solid blue; draws a 2-pixel solid blue outline around the element.
+
+- The outline is drawn outside the element, so it does not affect the layout or size of the button.
+
+This is commonly used for accessibility, helping users identify which element is currently active or selected.
+
+-----------------------------------------------------------------------------------------------------
+
+Example 2: Outline with Offset
+
+.box {
+  width: 150px;
+  height: 80px;
+  background: lightcoral;
+
+  outline: 3px dashed black;
+  outline-offset: 5px;
+}
+outline-offset :- The outline is placed 5px away from the element’s border.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Outline Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f9f9f9;
+    }
+
+    .button:focus {
+      outline: 2px solid blue;
+    }
+
+    .box {
+      width: 160px;
+      height: 80px;
+      background: lightcoral;
+
+      outline: 4px dashed black; 
+      outline-offset: 3px; /*outline-offset :- The outline is placed 5px away from the element’s border.*/
+      
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Outline Example</h2>
+
+  <button class="button">Click or Tab Me</button>
+
+  <div class="box">Box with Outline</div>
+
+</body>
+</html>
+
+<!--
+Output:outline example
+
+When you click or press tab on the button, a blue outline appears, showing that the button is in focus.
+The second box has a dashed black outline with a gap (offset) between the box edge and the outline, making it stand out clearly.
+
+4. Key Differences: Outline vs Border
+While both can visually appear similar, outlines differ from borders in a few ways:
+
+| Feature         | Border                       | Outline                              |
+| --------------- | ---------------------------- | ------------------------------------ |
+| Position        | Takes up space inside layout | Drawn outside, doesn’t affect layout |
+| Offset          | No offset property           | outline-offset can push it outward   |
+| Width control   | Can vary on each side        | Always uniform on all sides          |
+| Rounded corners | Works with border-radius     | No rounded corners (usually)         |
+
+-->
+

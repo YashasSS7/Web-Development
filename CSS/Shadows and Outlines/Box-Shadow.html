@@ -1,0 +1,83 @@
+ <!--                                                              Shadows
+When styling websites, adding depth and focus to elements helps improve the design and user experience.
+
+CSS provides two powerful tools for this: shadows (box-shadow, text-shadow) and outlines.
+
+
+
+                                                            1. Box Shadows
+box-shadow is a popular CSS property that enables designers to add shadow effects around an element's frame.
+It can be used to give any element, be it a div, image, or button, a 3D feel or to emphasize on hover. Syntax:
+
+Syntax:
+#box-shadow: h-offset v-offset blur spread color inset;
+
+- h-offset and v-offset: Determines the shadow's horizontal and vertical position.
+- blur: The larger the value, the blurrier the shadow.
+- spread: Expands or shrinks the shadow size.
+- color: Defines the shadow color.
+- inset: Makes the shadow inner.
+
+Example 1: Basic Shadow
+
+.card {
+  width: 200px;
+  height: 100px;
+  background: white;
+  box-shadow: 5px 5px 15px 5px #888888;
+}
+This adds a soft grey shadow to the element, giving it a floating effect.
+----------------------------------------------------------------------------------------------------------------------------
+Example 2: Inset Shadow
+
+.input-box {
+  width: 250px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+The shadow is inside the input field, giving a pressed look.
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Shadow Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f9f9f9;
+    }
+
+    .card {
+      width: 220px;
+      height: 120px;
+      background: white;
+      box-shadow: 5px 10px 15px 5px #ff0b0b;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .input-box {
+      width: 250px;
+      padding: 10px;
+      border: 1px solid #00ff59;
+      box-shadow: inset 5px 5px 6px rgba(31, 6, 134, 0.3);
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Box Shadow Example</h2>
+
+  <div class="card">This is a box with outer shadow.</div>
+
+  <input type="text" class="input-box" placeholder="Inset shadow input">
+
+</body>
+</html>
