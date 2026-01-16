@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+    <style>
+        
+        .box {
+            width: 40vw;
+            height: 20vh;
+            border: 2px solid black;
+
+
+
+            overflow: hidden;
+            /* overflow: hidden; is a CSS property that cuts off (clips) any content that goes outside the element’s box */
+
+
+            /* since its only 20vw and 20vh , the text will flow ,so if we add overflow:auto it will automatically adds scroll bar to the side which is overflown(only if text overflows) or just we can add overflow:scroll (it will add scroll bar to both sides) */
+
+            overflow: scroll;
+            overflow: auto;
+
+
+
+            /* overflow-x and overflow-y (CSS) These two properties independently control overflow on the horizontal (X) and vertical (Y) axes. */
+            overflow-x: scroll;
+            overflow-y: hidden;
+            /* or auto */
+
+            /* or just in one line  */
+            overflow: scroll hidden;
+            /* HERE SCROLL IS X AND HIDDEN IS Y */
+
+
+            white-space: nowrap;
+            /* 
+    white-space: nowrap; is a CSS property-value that tells the browser not to break text into multiple lines.
+    
+    What it does :-
+    -Prevents line wrapping
+    -Text stays on one single line
+    -Extra text overflows the container instead of going to the next line    
+    
+    */
+
+
+            /* text-overflow: ellipsis; */
+            /* text-overflow: ellipsis; is a CSS property that shows ... when text is cut off because it doesn’t fit inside its container. */
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque maxime tenetur, doloribus maiores possimus
+        debitis? Cum, sunt! Ipsa iste reiciendis nostrum quaerat? Odio, rem. Facere eaque sint consequuntur! Nemo neque
+        quibusdam qui quae ratione aspernatur exercitationem iure inventore. Harum repellendus totam asperiores velit
+        animi optio quos obcaecati quia enim eveniet.
+    </div>
+</body>
+
+</html>
